@@ -7,10 +7,10 @@ package getman.calc;
 /**Master class of the application*/
 public class Master {
 
-	/** Applicatiob entry point
+	/** Application entry point
 	 * @param args*/
 	public static void main(String[] args) {
-		
+		MainWindow mainWin = new MainWindow("КаРкулятор");
 	}
 
 }
