@@ -6,6 +6,12 @@ import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.TextArea;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
 import javax.swing.JFrame;
 
@@ -13,6 +19,7 @@ import javax.swing.JFrame;
  * @version 1.0
  * @since 12-08-2014*/
 
+/**represents main window of the calculator app*/
 public class MainWindow extends JFrame{
 	//-----------Data members-----------
 	/**calc screen*/
@@ -58,6 +65,7 @@ public class MainWindow extends JFrame{
 		Container contentPane = mainFrame.getContentPane();
 		
 		createControls(mainFrame);
+		setupListeners();
 		
 		mainFrame.pack();
 		mainFrame.setVisible(true);
@@ -311,4 +319,166 @@ public class MainWindow extends JFrame{
 		gbcBtnCalc.anchor = GridBagConstraints.FIRST_LINE_END;
 		frame.add(btnCalc, gbcBtnCalc);
 	}
+	
+	/**set up button listeners*/
+	private void setupListeners(){
+		btn0.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				calcScreen.append("0");
+			}
+		});
+		
+		btn1.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				calcScreen.append("1");
+			}
+		});
+		
+		btn2.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				calcScreen.append("2");
+			}
+		});
+		
+		btn3.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				calcScreen.append("3");
+			}
+		});
+		
+		btn4.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				calcScreen.append("4");
+			}
+		});
+		
+		btn5.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				calcScreen.append("5");
+			}
+		});
+		
+		btn6.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				calcScreen.append("6");
+			}
+		});
+		
+		btn7.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				calcScreen.append("7");
+			}
+		});
+		
+		btn8.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				calcScreen.append("8");
+			}
+		});
+		
+		btn9.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				calcScreen.append("9");
+			}
+		});
+		
+		btnPlus.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				calcScreen.append("+");
+			}
+		});
+		
+		btnMinus.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				calcScreen.append("-");
+			}
+		});
+		
+		btnMultipl.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				calcScreen.append("*");
+			}
+		});
+		
+		btnDivision.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				calcScreen.append("/");
+			}
+		});
+		
+		btnComma.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				calcScreen.append(".");
+			}
+		});
+		
+		btnCalc.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				calcScreen.append("=");
+			}
+		});
+		
+		calcScreen.addKeyListener(new KeyListener() {
+			@Override
+			public void keyTyped(KeyEvent e) {
+//				System.out.println(e.getKeyChar() + " pressed");
+				filterKeys(e);
+			}
+
+			@Override
+			public void keyReleased(KeyEvent e) {
+			}
+			
+			@Override
+			public void keyPressed(KeyEvent e) {
+			}
+		});
+	}
+	
+	/**provides filtering for user input*/
+	private void filterKeys(KeyEvent e){
+		String key = String.valueOf(e.getKeyChar() );
+		int intKey = e.getKeyChar();
+//		System.out.print(key + "/" + intkey + " ");
+		if (key.equals("0") || 
+			key.equals("1") ||
+			key.equals("2") ||
+			key.equals("3") ||
+			key.equals("4") ||
+			key.equals("5") ||
+			key.equals("6") ||
+			key.equals("7") ||
+			key.equals("8") ||
+			key.equals("9") ||
+			key.equals(".") ||
+			key.equals("+") ||
+			key.equals("-") ||
+			key.equals("=") ||
+			key.equals("/") ||
+			key.equals("*") ||
+			(intKey == 8)
+			){
+			
+		} else {
+			e.consume();
+		}
+		
+	}
+	
 }
