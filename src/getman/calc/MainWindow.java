@@ -77,27 +77,29 @@ public class MainWindow extends JFrame{
 		GridBagLayout gbl = new GridBagLayout();
 		frame.setLayout(gbl);
 		
+		//standart button dimension
+		Dimension stdBtnDim = new Dimension(40, 40);
+		
 		//calc screen
 		calcScreen = new TextArea();
+		calcScreen.setPreferredSize(new Dimension(100, 100));
 		GridBagConstraints gbcCalsScreen = new GridBagConstraints();
 		gbcCalsScreen.gridx = 0;
 		gbcCalsScreen.gridy = 0;
 		gbcCalsScreen.gridwidth = 4;
 		gbcCalsScreen.gridheight = 1;
 		gbcCalsScreen.fill = GridBagConstraints.HORIZONTAL;
-		gbcCalsScreen.weightx = 1.0;
+		gbcCalsScreen.weightx = 0.1;
 		gbcCalsScreen.weighty = 0.0;
 //		gbcCalsScreen.ipadx = 10;
 //		gbcCalsScreen.ipady = 10;
-		gbcCalsScreen.anchor = GridBagConstraints.FIRST_LINE_END;
+		gbcCalsScreen.anchor = GridBagConstraints.NORTHWEST;
 		frame.add(calcScreen, gbcCalsScreen);
-		
-		//standart button dimension
-		Dimension stdBtnDim = new Dimension(45, 45);
 		
 		//"7" button
 		btn7 = new Button("7");
-		btn7.setSize(stdBtnDim);
+//		btn7.setSize(stdBtnDim);
+		btn7.setPreferredSize(stdBtnDim);
 		GridBagConstraints gbcBtn7 = new GridBagConstraints();
 		gbcBtn7.gridx = 0;
 		gbcBtn7.gridy = 1;
@@ -106,12 +108,14 @@ public class MainWindow extends JFrame{
 		gbcBtn7.fill = GridBagConstraints.NONE;
 		gbcBtn7.weightx = 0.1;
 		gbcBtn7.weighty = 0.0;
-		gbcBtn7.anchor = GridBagConstraints.FIRST_LINE_END;
+//		gbcBtn7.ipadx = 10;
+//		gbcBtn7.ipady = 10;
+		gbcBtn7.anchor = GridBagConstraints.NORTHEAST;
 		frame.add(btn7, gbcBtn7);
 		
 		//"8" button
 		btn8 = new Button("8");
-		btn8.setSize(stdBtnDim);
+		btn8.setPreferredSize(stdBtnDim);
 		GridBagConstraints gbcBtn8 = new GridBagConstraints();
 		gbcBtn8.gridx = 1;
 		gbcBtn8.gridy = 1;
@@ -120,12 +124,14 @@ public class MainWindow extends JFrame{
 		gbcBtn8.fill = GridBagConstraints.NONE;
 		gbcBtn8.weightx = 0.0;
 		gbcBtn8.weighty = 0.0;
-		gbcBtn8.anchor = GridBagConstraints.FIRST_LINE_END;
+//		gbcBtn8.ipadx = 10;
+//		gbcBtn8.ipady = 10;
+		gbcBtn8.anchor = GridBagConstraints.NORTHEAST;
 		frame.add(btn8, gbcBtn8);
 		
 		//"9" button
 		btn9 = new Button("9");
-		btn9.setSize(stdBtnDim);
+		btn9.setPreferredSize(stdBtnDim);
 		GridBagConstraints gbcBtn9 = new GridBagConstraints();
 		gbcBtn9.gridx = 2;
 		gbcBtn9.gridy = 1;
@@ -134,12 +140,14 @@ public class MainWindow extends JFrame{
 		gbcBtn9.fill = GridBagConstraints.NONE;
 		gbcBtn9.weightx = 0.0;
 		gbcBtn9.weighty = 0.0;
-		gbcBtn9.anchor = GridBagConstraints.FIRST_LINE_END;
+//		gbcBtn9.ipadx = 10;
+//		gbcBtn9.ipady = 10;
+		gbcBtn9.anchor = GridBagConstraints.NORTHEAST;
 		frame.add(btn9, gbcBtn9);
 		
 		//"+" button
 		btnPlus = new Button("+");
-		btnPlus.setSize(stdBtnDim);
+		btnPlus.setPreferredSize(stdBtnDim);
 		GridBagConstraints gbcBtnPlus = new GridBagConstraints();
 		gbcBtnPlus.gridx = 3;
 		gbcBtnPlus.gridy = 1;
@@ -148,12 +156,14 @@ public class MainWindow extends JFrame{
 		gbcBtnPlus.fill = GridBagConstraints.NONE;
 		gbcBtnPlus.weightx = 0.0;
 		gbcBtnPlus.weighty = 0.0;
-		gbcBtnPlus.anchor = GridBagConstraints.FIRST_LINE_END;
+//		gbcBtnPlus.ipadx = 10;
+//		gbcBtnPlus.ipady = 10;
+		gbcBtnPlus.anchor = GridBagConstraints.NORTHEAST;
 		frame.add(btnPlus, gbcBtnPlus);
 		
 		//"4" button
 		btn4 = new Button("4");
-		btn4.setSize(stdBtnDim);
+		btn4.setPreferredSize(stdBtnDim);
 		GridBagConstraints gbcBtn4 = new GridBagConstraints();
 		gbcBtn4.gridx = 0;
 		gbcBtn4.gridy = 2;
@@ -162,12 +172,14 @@ public class MainWindow extends JFrame{
 		gbcBtn4.fill = GridBagConstraints.NONE;
 		gbcBtn4.weightx = 0.1;
 		gbcBtn4.weighty = 0.0;
-		gbcBtn4.anchor = GridBagConstraints.FIRST_LINE_END;
+//		gbcBtn4.ipadx = 10;
+//		gbcBtn4.ipady = 10;
+		gbcBtn4.anchor = GridBagConstraints.NORTHEAST;
 		frame.add(btn4, gbcBtn4);
 		
 		//"5" button
 		btn5 = new Button("5");
-		btn5.setSize(stdBtnDim);
+		btn5.setPreferredSize(stdBtnDim);
 		GridBagConstraints gbcBtn5 = new GridBagConstraints();
 		gbcBtn5.gridx = 1;
 		gbcBtn5.gridy = 2;
@@ -176,12 +188,14 @@ public class MainWindow extends JFrame{
 		gbcBtn5.fill = GridBagConstraints.NONE;
 		gbcBtn5.weightx = 0.0;
 		gbcBtn5.weighty = 0.0;
-		gbcBtn5.anchor = GridBagConstraints.FIRST_LINE_END;
+//		gbcBtn5.ipadx = 10;
+//		gbcBtn5.ipady = 10;
+		gbcBtn5.anchor = GridBagConstraints.NORTHEAST;
 		frame.add(btn5, gbcBtn5);
 		
 		//"6" button
 		btn6 = new Button("6");
-		btn6.setSize(stdBtnDim);
+		btn6.setPreferredSize(stdBtnDim);
 		GridBagConstraints gbcBtn6 = new GridBagConstraints();
 		gbcBtn6.gridx = 2;
 		gbcBtn6.gridy = 2;
@@ -190,12 +204,14 @@ public class MainWindow extends JFrame{
 		gbcBtn6.fill = GridBagConstraints.NONE;
 		gbcBtn6.weightx = 0.0;
 		gbcBtn6.weighty = 0.0;
-		gbcBtn6.anchor = GridBagConstraints.FIRST_LINE_END;
+//		gbcBtn6.ipadx = 10;
+//		gbcBtn6.ipady = 10;
+		gbcBtn6.anchor = GridBagConstraints.NORTHEAST;
 		frame.add(btn6, gbcBtn6);
 		
 		//"-" button
 		btnMinus = new Button("-");
-		btnMinus.setSize(stdBtnDim);
+		btnMinus.setPreferredSize(stdBtnDim);
 		GridBagConstraints gbcBtnMinus = new GridBagConstraints();
 		gbcBtnMinus.gridx = 3;
 		gbcBtnMinus.gridy = 2;
@@ -204,12 +220,14 @@ public class MainWindow extends JFrame{
 		gbcBtnMinus.fill = GridBagConstraints.NONE;
 		gbcBtnMinus.weightx = 0.0;
 		gbcBtnMinus.weighty = 0.0;
-		gbcBtnMinus.anchor = GridBagConstraints.FIRST_LINE_END;
+//		gbcBtnMinus.ipadx = 10;
+//		gbcBtnMinus.ipady = 10;
+		gbcBtnMinus.anchor = GridBagConstraints.NORTHEAST;
 		frame.add(btnMinus, gbcBtnMinus);
 		
 		//"1" button
 		btn1 = new Button("1");
-		btn1.setSize(stdBtnDim);
+		btn1.setPreferredSize(stdBtnDim);
 		GridBagConstraints gbcBtn1 = new GridBagConstraints();
 		gbcBtn1.gridx = 0;
 		gbcBtn1.gridy = 3;
@@ -218,12 +236,14 @@ public class MainWindow extends JFrame{
 		gbcBtn1.fill = GridBagConstraints.NONE;
 		gbcBtn1.weightx = 0.1;
 		gbcBtn1.weighty = 0.0;
-		gbcBtn1.anchor = GridBagConstraints.FIRST_LINE_END;
+//		gbcBtn1.ipadx = 10;
+//		gbcBtn1.ipady = 10;
+		gbcBtn1.anchor = GridBagConstraints.NORTHEAST;
 		frame.add(btn1, gbcBtn1);
 		
 		//"2" button
 		btn2 = new Button("2");
-		btn2.setSize(stdBtnDim);
+		btn2.setPreferredSize(stdBtnDim);
 		GridBagConstraints gbcBtn2 = new GridBagConstraints();
 		gbcBtn2.gridx = 1;
 		gbcBtn2.gridy = 3;
@@ -232,12 +252,14 @@ public class MainWindow extends JFrame{
 		gbcBtn2.fill = GridBagConstraints.NONE;
 		gbcBtn2.weightx = 0.0;
 		gbcBtn2.weighty = 0.0;
-		gbcBtn2.anchor = GridBagConstraints.FIRST_LINE_END;
+//		gbcBtn2.ipadx = 10;
+//		gbcBtn2.ipady = 10;
+		gbcBtn2.anchor = GridBagConstraints.NORTHEAST;
 		frame.add(btn2, gbcBtn2);		
 		
 		//"3" button
 		btn3 = new Button("3");
-		btn3.setSize(stdBtnDim);
+		btn3.setPreferredSize(stdBtnDim);
 		GridBagConstraints gbcBtn3 = new GridBagConstraints();
 		gbcBtn3.gridx = 2;
 		gbcBtn3.gridy = 3;
@@ -246,12 +268,14 @@ public class MainWindow extends JFrame{
 		gbcBtn3.fill = GridBagConstraints.NONE;
 		gbcBtn3.weightx = 0.0;
 		gbcBtn3.weighty = 0.0;
-		gbcBtn3.anchor = GridBagConstraints.FIRST_LINE_END;
+//		gbcBtn3.ipadx = 10;
+//		gbcBtn3.ipady = 10;
+		gbcBtn3.anchor = GridBagConstraints.NORTHEAST;
 		frame.add(btn3, gbcBtn3);
 		
 		//"*" button
 		btnMultipl = new Button("*");
-		btnMultipl.setSize(stdBtnDim);
+		btnMultipl.setPreferredSize(stdBtnDim);
 		GridBagConstraints gbcBtnMultipl = new GridBagConstraints();
 		gbcBtnMultipl.gridx = 3;
 		gbcBtnMultipl.gridy = 3;
@@ -260,12 +284,14 @@ public class MainWindow extends JFrame{
 		gbcBtnMultipl.fill = GridBagConstraints.NONE;
 		gbcBtnMultipl.weightx = 0.0;
 		gbcBtnMultipl.weighty = 0.0;
-		gbcBtnMultipl.anchor = GridBagConstraints.FIRST_LINE_END;
+//		gbcBtnMultipl.ipadx = 10;
+//		gbcBtnMultipl.ipady = 10;
+		gbcBtnMultipl.anchor = GridBagConstraints.NORTHEAST;
 		frame.add(btnMultipl, gbcBtnMultipl);
 		
 		//"0" button
 		btn0 = new Button("0");
-		btn0.setSize(stdBtnDim);
+		btn0.setPreferredSize(stdBtnDim);
 		GridBagConstraints gbcBtn0 = new GridBagConstraints();
 		gbcBtn0.gridx = 0;
 		gbcBtn0.gridy = 4;
@@ -273,13 +299,15 @@ public class MainWindow extends JFrame{
 		gbcBtn0.gridheight = 1;
 		gbcBtn0.fill = GridBagConstraints.NONE;
 		gbcBtn0.weightx = 0.1;
-		gbcBtn0.weighty = 0.5;
-		gbcBtn0.anchor = GridBagConstraints.FIRST_LINE_END;
+		gbcBtn0.weighty = 0.1;
+//		gbcBtn0.ipadx = 10;
+//		gbcBtn0.ipady = 10;
+		gbcBtn0.anchor = GridBagConstraints.NORTHEAST;
 		frame.add(btn0, gbcBtn0);
 		
 		//"." button
 		btnComma = new Button(",");
-		btnComma.setSize(stdBtnDim);
+		btnComma.setPreferredSize(stdBtnDim);
 		GridBagConstraints gbcBtnComma = new GridBagConstraints();
 		gbcBtnComma.gridx = 1;
 		gbcBtnComma.gridy = 4;
@@ -287,13 +315,15 @@ public class MainWindow extends JFrame{
 		gbcBtnComma.gridheight = 1;
 		gbcBtnComma.fill = GridBagConstraints.NONE;
 		gbcBtnComma.weightx = 0.0;
-		gbcBtnComma.weighty = 0.5;
-		gbcBtnComma.anchor = GridBagConstraints.FIRST_LINE_END;
+		gbcBtnComma.weighty = 0.1;
+//		gbcBtnComma.ipadx = 10;
+//		gbcBtnComma.ipady = 10;
+		gbcBtnComma.anchor = GridBagConstraints.NORTHEAST;
 		frame.add(btnComma, gbcBtnComma);
 		
 		//"/" button
 		btnDivision = new Button("/");
-		btnDivision.setSize(stdBtnDim);
+		btnDivision.setPreferredSize(stdBtnDim);
 		GridBagConstraints gbcBtnDivision = new GridBagConstraints();
 		gbcBtnDivision.gridx = 2;
 		gbcBtnDivision.gridy = 4;
@@ -301,13 +331,15 @@ public class MainWindow extends JFrame{
 		gbcBtnDivision.gridheight = 1;
 		gbcBtnDivision.fill = GridBagConstraints.NONE;
 		gbcBtnDivision.weightx = 0.0;
-		gbcBtnDivision.weighty = 0.5;
-		gbcBtnDivision.anchor = GridBagConstraints.FIRST_LINE_END;
+		gbcBtnDivision.weighty = 0.1;
+//		gbcBtnDivision.ipadx = 10;
+//		gbcBtnDivision.ipady = 10;
+		gbcBtnDivision.anchor = GridBagConstraints.NORTHEAST;
 		frame.add(btnDivision, gbcBtnDivision);
 		
 		//"=" button
 		btnCalc = new Button("=");
-		btnCalc.setSize(stdBtnDim);
+		btnCalc.setPreferredSize(stdBtnDim);
 		GridBagConstraints gbcBtnCalc = new GridBagConstraints();
 		gbcBtnCalc.gridx = 3;
 		gbcBtnCalc.gridy = 4;
@@ -315,8 +347,10 @@ public class MainWindow extends JFrame{
 		gbcBtnCalc.gridheight = 1;
 		gbcBtnCalc.fill = GridBagConstraints.NONE;
 		gbcBtnCalc.weightx = 0.0;
-		gbcBtnCalc.weighty = 0.5;
-		gbcBtnCalc.anchor = GridBagConstraints.FIRST_LINE_END;
+		gbcBtnCalc.weighty = 0.1;
+//		gbcBtnCalc.ipadx = 10;
+//		gbcBtnCalc.ipady = 10;
+		gbcBtnCalc.anchor = GridBagConstraints.NORTHEAST;
 		frame.add(btnCalc, gbcBtnCalc);
 	}
 	
