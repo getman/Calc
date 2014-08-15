@@ -50,6 +50,7 @@ public class MainWindow extends JFrame{
 	private Button btnDivision;
 	private Button btnCalc;
 	
+	private UserInputScanner userIntput = new UserInputScanner();
 	//------------Methods--------------
 	
 	/**Parameter constructor
@@ -506,9 +507,14 @@ public class MainWindow extends JFrame{
 			key.equals("=") ||
 			key.equals("/") ||
 			key.equals("*") ||
-			(intKey == 8)
+			(intKey == 8) /**backspace*/
 			){
-			
+			//ok, can be typed
+			userIntput.receiveKey(e);
+			if (userIntput.isPerformedCalc() ){
+				calcScreen.append("=\n" + userIntput.claimAnswer() );
+				e.consume();
+			}
 		} else {
 			e.consume();
 		}

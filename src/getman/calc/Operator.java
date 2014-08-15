@@ -11,9 +11,30 @@ enum OperatorType{
 public class Operator {
 	//-----------Data members--------------
 	private OperatorType operatorType;
-	private String result;
+	private String result = null;
 	
 	//-----------Methods-----------
+	/**Parameter constructor*/
+	public Operator(String operator){
+		switch (operator) {
+		case "+":
+			operatorType = OperatorType.Addition;
+			break;
+		case "-":
+			operatorType = OperatorType.Subtraction;
+			break;
+		case "*":
+			operatorType = OperatorType.Multiplication;			
+			break;
+		case "/":
+			operatorType = OperatorType.Division;			
+			break;
+		default:
+			break;
+		}
+		
+	}
+	
 	public void perform(Operand oper1, Operand oper2){
 		switch (operatorType) {
 			case Addition:
@@ -30,4 +51,11 @@ public class Operator {
 		}
 	}
 	
+	public String getrResult(){
+		return result;
+	}
+	
+	public boolean isPerformed(){
+		return (result != null);
+	}
 }
