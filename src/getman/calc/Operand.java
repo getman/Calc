@@ -40,4 +40,18 @@ public class Operand {
 		flFormed = fl;
 	}
 	
+	/**claims the result of operation from Operator object for further calculations*/
+	public void claimResult(Operator operator){
+		String result = operator.getrResult();
+		switch (operator.getType() ) {
+		case Addition:
+		case Subtraction:
+			this.value = Integer.valueOf(result);
+			this.flFormed = true;
+			break;
+
+		default:
+			break;
+		}
+	}
 }

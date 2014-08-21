@@ -55,6 +55,8 @@ public class UserInputScanner {
 		
 		case "=":
 			operator.perform(operand1, operand2);
+			operand1.claimResult(operator);
+			operand2 = null;
 			break;
 			
 		default:

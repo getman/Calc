@@ -10,7 +10,7 @@ enum OperatorType{
 
 public class Operator {
 	//-----------Data members--------------
-	private OperatorType operatorType;
+	private OperatorType type;
 	private String result = null;
 	
 	//-----------Methods-----------
@@ -18,16 +18,16 @@ public class Operator {
 	public Operator(String operator){
 		switch (operator) {
 		case "+":
-			operatorType = OperatorType.Addition;
+			type = OperatorType.Addition;
 			break;
 		case "-":
-			operatorType = OperatorType.Subtraction;
+			type = OperatorType.Subtraction;
 			break;
 		case "*":
-			operatorType = OperatorType.Multiplication;			
+			type = OperatorType.Multiplication;			
 			break;
 		case "/":
-			operatorType = OperatorType.Division;			
+			type = OperatorType.Division;			
 			break;
 		default:
 			break;
@@ -36,7 +36,7 @@ public class Operator {
 	}
 	
 	public void perform(Operand oper1, Operand oper2){
-		switch (operatorType) {
+		switch (type) {
 			case Addition:
 				result = String.valueOf(Integer.valueOf(oper1.getValue() ) + Integer.valueOf(oper2.getValue() ) );
 				break;
@@ -53,6 +53,10 @@ public class Operator {
 	
 	public String getrResult(){
 		return result;
+	}
+	
+	public OperatorType getType(){
+		return this.type;
 	}
 	
 	public boolean isPerformed(){
